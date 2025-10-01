@@ -1,0 +1,61 @@
+
+
+
+header {
+    background-color: aqua;
+    grid-area: he;
+}
+nav {
+    background-color: rgb(149, 202, 202);
+    grid-area: na;
+}
+
+section {
+    background-color: #e9e981;
+    grid-area: se;
+}
+article {
+    background-color: rgb(123, 187, 187);
+    grid-area: ar;
+}
+
+aside {
+    background-color: rgb(129, 141, 141);
+    grid-area: as;
+}
+
+footer {
+    background-color: rgb(137, 156, 156);
+    grid-area: fo;
+}
+
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    gap: 10px;
+    grid-template-areas: 
+    "he he he"
+    "na na na"
+    "se se as"
+    "ar ar as"
+    "fo fo fo";
+    
+}
+
+@media screen and (max-width: 500px){
+    body {
+        grid-template-rows: 100px 100px 100px 100px 100px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "he"
+        "na"
+        "se"
+        "ar"
+        "as"
+        "fo";
+    }
+} 

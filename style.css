@@ -1,0 +1,53 @@
+
+
+
+header {
+    background-color: aqua;
+    grid-area: h;
+}
+nav {
+    background-color: rgb(149, 202, 202);
+    grid-area: n;
+}
+
+main {
+    background-color: rgb(123, 187, 187);
+    grid-area: m;
+}
+
+aside {
+    background-color: rgb(129, 141, 141);
+    grid-area: a;
+}
+
+footer {
+    background-color: rgb(137, 156, 156);
+    grid-area: f;
+}
+
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 300px 50px;
+    gap: 10px;
+    grid-template-areas: 
+    "h h h"
+    "n m a"
+    "f f f";
+}
+
+@media screen and (max-width: 500px){
+    body {
+        grid-template-rows: 100px 100px 100px 100px 100px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "m"
+        "a"
+        "f";
+    }
+} 
